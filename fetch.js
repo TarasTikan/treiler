@@ -1,15 +1,7 @@
+const API_KEY = '9f3449ca8495a13b6d35e887839f0061';
+const BASE_URL = 'https://api.themoviedb.org/3';
+const TREND_URL = `${BASE_URL}/trending/movie/week`;
+const SEARCH_URL = `${BASE_URL}/search/movie`;
+const ID_URL = `${BASE_URL}/movie/`;
 
-const API = 'https://api.themoviedb.org/3'
-const filter = `/movie/{movie_id}/videos?api_key=${API_KEY}&language=en-US`
-const API_KEY = '9f3449ca8495a13b6d35e887839f0061'
-const TREND_URL = `${API}/trending/movie/week?api_key=${API_KEY}`;
-const fff =  `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`
-export function fetchCountries(name) {
-    return fetch(fff).then(r => {
-        if(!r.ok) {
-            throw new Error(r.status)
-        }
-        return r.json()
-    })
-    
-} 
+export { API_KEY, BASE_URL, TREND_URL, SEARCH_URL, ID_URL };
