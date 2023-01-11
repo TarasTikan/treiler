@@ -4,6 +4,7 @@ import { treiler, trend } from './fetch.js'
 // const TREND_URL = `${BASE_URL}/trending/movie/week?api_key=`;
 // const TREILERS = `${BASE_URL}/movie/899112/videos?api_key=`;
 const list = document.querySelector('.list-films')
+const treil = document.querySelector('.treilers')
 const API_URL = 'https://image.tmdb.org/t/p/w500'
 
   trend().then(data => {
@@ -17,10 +18,11 @@ function render (results) {
     const rendering = results.map(muvie => {
       const {poster_path, title} = muvie
         return `<li class="film-item">
-        <img src="${API_URL}${poster_path}" alt="${poster_path}" width='394' height='574'>
+        <img src="${API_URL}${poster_path}" alt="${poster_path}" width='394' height='574' class="treilers">
     <h1 class="title">${title}</h1>
       </li>`
     })
 
     list.insertAdjacentHTML('beforeend', rendering)
 }
+
