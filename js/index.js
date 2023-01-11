@@ -4,26 +4,21 @@ import { treiler, trend } from './fetch.js'
 // const TREND_URL = `${BASE_URL}/trending/movie/week?api_key=`;
 // const TREILERS = `${BASE_URL}/movie/899112/videos?api_key=`;
 const list = document.querySelector('.list-films')
+const API_URL = 'https://image.tmdb.org/t/p/w500'
 
-// function trend() {
-//     return fetch(`${TREND_URL}${API_KEY}`) .then(response => {
-//         return response.json();
-//       })
-//   }
-treiler().then(data => {
-    console.log(data)
+  trend().then(data => {
+
+    console.log(data.results[1])
+   render(data.results)
   })
-// function render ()
 
-
-function render (films) {
-    const [{name, }] = films
+function render (results) {
     list.innerHTML = ''
-    const rendering = films.map([{name}] => {
-        return ` <li class="film-item">
-        <img src="${}" alt="${}" width='394' height='574'>
-    <h1 class="title">${}</h1>
-    <p class="ganre">${}</p>
+    const rendering = results.map(muvie => {
+      const {poster_path, title} = muvie
+        return `<li class="film-item">
+        <img src="${API_URL}${poster_path}" alt="${poster_path}" width='394' height='574'>
+    <h1 class="title">${title}</h1>
       </li>`
     })
 
