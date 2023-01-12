@@ -8,17 +8,15 @@ const treil = document.querySelector('.treilers')
 const API_URL = 'https://image.tmdb.org/t/p/w500'
 
   trend().then(data => {
-
-    console.log(data.results[1])
    render(data.results)
   })
 
 function render (results) {
     list.innerHTML = ''
     const rendering = results.map(muvie => {
-      const {poster_path, title} = muvie
+      const {poster_path, title, id} = muvie
         return `<li class="film-item">
-        <img src="${API_URL}${poster_path}" alt="${poster_path}" width='394' height='574' class="treilers">
+        <img src="${API_URL}${poster_path}" alt="${poster_path}" width='394' height='574' class="treilers" id='${id}'>
     <h1 class="title">${title}</h1>
       </li>`
     })
