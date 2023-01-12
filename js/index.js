@@ -16,7 +16,9 @@ function render (results) {
     const rendering = results.map(muvie => {
       const {poster_path, title, id} = muvie
         return `<li class="film-item">
+        <div class='wrap'>
         <img src="${API_URL}${poster_path}" alt="${poster_path}" width='394' height='574' class="treilers" id='${id}'>
+        </div>
     <h1 class="title">${title}</h1>
       </li>`
     })
