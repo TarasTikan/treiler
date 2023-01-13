@@ -7,7 +7,6 @@ const API_URL = 'https://image.tmdb.org/t/p/w500'
   trend().then(data => {
    render(data.results)
   const div = document.querySelector('.wrap')
-
   // -------------------------------------------------------
   list.addEventListener('click', onClickWatch)
 
@@ -22,28 +21,28 @@ const officialTrail = data.results.length -1
         })
   }
 
-  function renderTrail (video) {
-    const {key} = video
-    div.innerHTML = `<iframe
-    width="394"
-    height="574"
-    src="https://www.youtube.com/embed/${key}"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    waitUntil()
-  ></iframe>`
-  setTimeout(() => {
-    console.clear()
-  }, 3000);
-  setTimeout(() => {
-    console.clear()
-  }, 3000);
-  setTimeout(() => {
-    console.clear()
-  }, 4000);
-}
+//   function renderTrail (video) {
+//     const {key} = video
+//     div.innerHTML = `<iframe
+//     width="394"
+//     height="574"
+//     src="https://www.youtube.com/embed/${key}"
+//     title="YouTube video player"
+//     frameborder="0"
+//     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//     allowfullscreen
+//     waitUntil()
+//   ></iframe>`
+//   // setTimeout(() => {
+//   //   console.clear()
+//   // }, 3000);
+//   // setTimeout(() => {
+//   //   console.clear()
+//   // }, 3000);
+//   // setTimeout(() => {
+//   //   console.clear()
+//   // }, 4000);
+// }
 // ---------------------------------------
 
   })
