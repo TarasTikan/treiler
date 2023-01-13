@@ -1,9 +1,8 @@
-import { treiler } from './fetch.js'
-
-const list = document.querySelector('.list-films')
-const div = document.querySelector('div')
+// import { treiler } from './fetch.js'
+// // import { div } from './index.js'
+// // console.log(div)
+// const list = document.querySelector('.list-films')
 // list.addEventListener('click', onClickWatch)
-
 //     function onClickWatch (event) {
 //         let query = event.target
 //         if(event.target.nodeName !== 'IMG') {
@@ -15,16 +14,13 @@ const div = document.querySelector('div')
 // const officialTrail = data.results.length -1
 //             console.log(data.results[officialTrail])
 //             renderTrail(data.results[officialTrail])
-//           //  render(data.results)
 //           })
 //     }
-// // 394  574
-//    export function renderTrail (video) {
-//         // console.clear()
+// function renderTrail (video) {
 //             const {key} = video
 //             div.innerHTML = `<iframe
-//             width="560"
-//             height="315"
+//             width="574"394
+//             height="394"
 //             src="https://www.youtube.com/embed/${key}"
 //             title="YouTube video player"
 //             frameborder="0"
@@ -41,6 +37,5 @@ const div = document.querySelector('div')
 //           setTimeout(() => {
 //             console.clear()
 //           }, 4000);
-//         // body.insertAdjacentHTML('beforeend', rendering)
 //     }
 
