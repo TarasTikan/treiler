@@ -17,3 +17,19 @@ async function onClickWatch (event) {
   const officialTrail = response.results.length -1
   renderTrail(response.results[officialTrail])
 }
+
+
+// --------------------------------------
+function renderTrail (video) {
+    `<iframe
+      width="394"
+      height="574"
+      src="https://www.youtube.com/embed/${key}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      waitUntil()
+    ></iframe>`
+    }
+    imgss.remove()
